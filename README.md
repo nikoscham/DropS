@@ -1,45 +1,15 @@
-# DropS: DROPlet Simulation
-
-Author: Nikolaos Chamakos (nikoscham@gmail.com)
-Institution: National Technical University of Athens, Greece
-
-# Introduction
+## Introduction
 
 DropS is a Fortran-based simulation code designed to predict the equilibrium shape of a droplet on a structured substrate. It solves the Young-Laplace equation of capillary hydrostatics augmented with a disjoining pressure term, which models the solid-liquid interactions. This approach treats the liquid-solid and liquid-vapor interfaces in a unified framework, making it particularly effective for modeling cases where the number of contact lines is a priori unknown.
 
-# Features
+## Documentation
 
-- Solvers:
+DropS has been used in several scientific papers:
+  - <a href="https://pubs.rsc.org/en/content/articlelanding/2013/sm/c3sm51377g" target="_blank">Chamakos, Kavousanakis, Papathanasiou, Soft Matter (2013)</a>
+  - <a href="https://pubs.acs.org/doi/full/10.1021/la500408j" target="_blank">Chamakos, Kavousanakis, Papathanasiou, Langmuir (2014)</a>
+  - <a href="https://pubs.acs.org/doi/abs/10.1021/acs.jpcc.5b00718" target="_blank">Kavousanakis, Chamakos, Papathanasiou, J. Phys. Chem. C (2015)</a>
 
-  - Eikonal Equation Solver
-  - Augmented Young-Laplace Equation Solver (Zero-Order Continuation)
-  - Augmented Young-Laplace Equation Solver (Pseudo Arc-Length Continuation)
-  - Decoupled Electrowetting Solver (Zero-Order Continuation)
-  - Decoupled Electrowetting Solver (Pseudo Arc-Length Continuation)
-  - Time Step Electrowetting Solver
-  - Time Step Augmented Young-Laplace Equation Solver
-  - Conventional Young-Laplace Equation Solver
-
-- Documentation:
-  - Chamakos, Kavousanakis, Papathanasiou, Soft Matter (2013)
-  - Chamakos, Kavousanakis, Papathanasiou, Langmuir (2014)
-  - Kavousanakis, Chamakos, Papathanasiou, J. Phys. Chem. C (2015)
-
-# Installation
-
-1. Prerequisites:
-
-   - Fortran compiler (e.g., gfortran)
-   - MUMPS library
-
-2. Clone the repository:
-   git clone <repository_url>
-   cd DropS
-
-3. Compile the code:
-   make
-
-# Usage
+## Usage
 
 1. Prepare the input files:
 
@@ -49,13 +19,24 @@ DropS is a Fortran-based simulation code designed to predict the equilibrium sha
    - CYLParameters.txt
    - ELParameters.txt
 
-2. Run the simulation:
+2. **Compile the code:**
+   ```sh
+   make
+   ```
+
+3. Run the simulation:
+   ```sh
    ./DropS
+   ```
 
-3. View the results:
-   - Results are saved in the Results directory.
+4. View the results saved in Results directory.
 
-# File Descriptions
+### Prerequisites:
+
+   - Fortran compiler (e.g., <a href="https://gcc.gnu.org/fortran/" target="_blank">GFortran</a>)
+   - <a href="https://mumps-solver.org/index.php" target="_blank">MUMPS</a> library
+
+## File Descriptions
 
 Source Files:
 
@@ -83,10 +64,6 @@ Input Files:
 - CYLParameters.txt: Parameters for the Conventional Young-Laplace equation.
 - ELParameters.txt: Parameters for the Electrowetting simulation.
 
-# License
+## License
 
-DropS is distributed under the terms of the MIT license. See LICENSE for more information.
-
-# Contact
-
-For any questions or issues, please contact Nikolaos Chamakos at nikoscham@gmail.com.
+DropS is distributed under the terms of <a href="./LICENSE" target="_blank">MIT License</a>. &#169; 2024 Nikolaos Chamakos.
