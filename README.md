@@ -19,7 +19,7 @@ DropS has been used in several scientific papers:
    - CYLParameters.txt
    - ELParameters.txt
 
-2. **Compile the code:**
+2. Compile the code:
    ```sh
    make
    ```
